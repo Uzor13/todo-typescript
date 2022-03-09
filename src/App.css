@@ -1,38 +1,151 @@
 .App {
-  text-align: center;
+    text-align: center;
+    margin-top: 1rem;
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.completed {
+    text-decoration: line-through;
+    color: hsl(233, 14%, 35%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todos {
+    position: absolute;
+    z-index: 3;
+    top: 40%;
+    width: 40vw;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header-content {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40vw;
+    margin-top: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.header-content h1 {
+    letter-spacing: .4rem;
+    color: hsl(0, 0%, 98%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-content button {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+}
+
+.header-content button svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+form {
+    width: 100%;
+    display: flex;
+}
+
+.todo-input {
+    width: 100%;
+    position: relative;
+    height: 50px;
+    border: none;
+    border-radius: .4rem;
+    padding: 1rem;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+}
+
+.todo-input__button {
+    position: absolute;
+    left: 80%;
+    margin-top: 7px;
+    height: 35px;
+    width: 80px;
+    border: none;
+    outline: none;
+    border-radius: .3rem;
+}
+
+.response {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.todo {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    padding: 0 1rem;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.todo-list {
+    width: 100%;
+    min-height: 50px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+    border-radius: .4rem;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.filter-button {
+    background: transparent;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    color: hsl(234, 11%, 52%);
+    font-weight: 700;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: .5rem;
+    width: 60%;
+}
+
+.todo-text {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.todo-text button svg {
+    width: 1.1rem;
+    height: 1.1rem;
+    cursor: pointer;
+}
+
+.todo button {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.delete svg {
+    width: 1.1rem;
+    height: 1.1rem;
+    cursor: pointer;
 }
